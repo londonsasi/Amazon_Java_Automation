@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static com.amazan.in.DriverManager.driver;
 
 public class BasketPage {
-    String BasketCount="";
+    String BasketCount="#nav-cart-count";
     public void goToBasket()
     {
         driver.findElement(By.cssSelector(BasketCount)).click();

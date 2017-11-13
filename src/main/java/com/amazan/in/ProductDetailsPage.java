@@ -10,13 +10,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ProductDetailsPage extends DriverManager
 {
     public void addToBasket() {
-        WebElement popup = (new WebDriverWait(driver, 50))
-        .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("a-button-close a-declarative")));
-        popup.click();
-        driver.findElement(By.cssSelector("add-to-cart-button")).click();
+        try {
+            WebElement popup = (new WebDriverWait(driver, 50))
+                    .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".a-button-close.a-declarative")));
+            popup.click();
+        }catch(Exception e){
+            // nothing
+        }
+        driver.findElement(By.cssSelector("#add-to-cart-button")).click();
     }
 
     private void until(ExpectedCondition<WebElement> webElementExpectedCondition) {
+
+
+
     }
 }
 

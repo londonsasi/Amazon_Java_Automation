@@ -6,7 +6,7 @@ Feature:Search Feature amazon page
 
  Scenario: search product
   Given  I am on amazon home page
- When    I search for a product
+  When   I search for a product
   Then   I should see the product in the search result
   When   I choose the first product
   And    I add product to basket
